@@ -99,7 +99,7 @@ var videosBySamePoster = [
 $(document).ready(function(){
 	for(i=0; i<videosBySamePoster.length; i++){
 		videohtml +='<div class="thumbnail"><a href=' + videosBySamePoster[i].url + '><img src=' + videosBySamePoster[i].thumb + '></a></div>';
-		videohtml +='<div class="feature-minis"' + ' id="feature-minis-"' + i + '><p>' + videosBySamePoster[i].vidtitle + '</p>';
+		videohtml +='<div class="feature-minis"' + ' id="feature-minis-"' + i + '><p class="video-title">' + videosBySamePoster[i].vidtitle + '</p>';
 		videohtml += '<p>by ' + videosBySamePoster[i].postedBy + '</p>';
 		videohtml += '<p>Duration: ' + videosBySamePoster[i].duration + '</p>';
 		videohtml += '<p>Views: ' + videosBySamePoster[i].totalViews + '<p></div>';
@@ -110,7 +110,7 @@ $(document).ready(function(){
 	for(i=0; i<otherVideos.length; i++){
 		videohtml += '<div class = "more-videos-previews"><div class ="more-thumbnails"><a href=' + otherVideos[i].url + '><img src=';
 		videohtml += otherVideos[i].thumb + '></a></div><div class="thumbnail-text">';
-		videohtml += '<p>' + otherVideos[i].vidtitle + '</p><p>' + otherVideos[i].postedBy + '</p></div></div>';
+		videohtml += '<p class="video-title">' + otherVideos[i].vidtitle + '</p><p>' + otherVideos[i].postedBy + '</p></div></div>';
 
 	}
 	$('#more-videos').html(videohtml);

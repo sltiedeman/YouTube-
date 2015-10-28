@@ -128,6 +128,9 @@
 					font-size: 12px;
 
 				}
+				.video-title{
+					font-weight: bold;
+				}
 			}
 		}
 
@@ -167,6 +170,7 @@
 				width: 25%;
 				margin-bottom: 3%;
 				.more-thumbnails{
+
 					img{
 						float: left;
 					}
@@ -178,6 +182,9 @@
 					overflow: hidden;
 					padding-left: 2%;
 					width: 50%;
+					.video-title{
+						font-weight: bold;
+					}
 				}
 			}
 		}
