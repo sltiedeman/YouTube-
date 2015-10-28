@@ -1,0 +1,91 @@
+/* line 1, ../compass/sass/style.scss */
+#total-wrapper {
+  max-width: 1080px;
+  margin: auto;
+  width: 100%;
+}
+/* line 5, ../compass/sass/style.scss */
+#total-wrapper #home {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 5px;
+  border-bottom: 2px solid;
+}
+/* line 11, ../compass/sass/style.scss */
+#total-wrapper #nav-wrapper {
+  padding-top: 8px;
+  width: 90%;
+  margin: auto;
+  border-bottom: 2px solid;
+  padding-bottom: 2px;
+  height: 130px;
+}
+/* line 18, ../compass/sass/style.scss */
+#total-wrapper #nav-wrapper #nav-left {
+  width: 20%;
+  float: left;
+}
+/* line 21, ../compass/sass/style.scss */
+#total-wrapper #nav-wrapper #nav-left img {
+  max-width: 100%;
+}
+/* line 25, ../compass/sass/style.scss */
+#total-wrapper #nav-wrapper #nav-center {
+  width: 50%;
+  float: left;
+}
+/* line 28, ../compass/sass/style.scss */
+#total-wrapper #nav-wrapper #nav-center #search-bar {
+  padding-top: 35px;
+  width: 100%;
+}
+/* line 31, ../compass/sass/style.scss */
+#total-wrapper #nav-wrapper #nav-center #search-bar input {
+  width: 60%;
+  margin-right: 10px;
+}
+/* line 36, ../compass/sass/style.scss */
+#total-wrapper #nav-wrapper #nav-center #nav-bar-center {
+  padding-top: 15px;
+}
+/* line 38, ../compass/sass/style.scss */
+#total-wrapper #nav-wrapper #nav-center #nav-bar-center #home-nav {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+/* line 43, ../compass/sass/style.scss */
+#total-wrapper #nav-wrapper #nav-center #nav-bar-center #videos {
+  float: left;
+  width: 20%;
+  text-align: center;
+  border-left: 2px solid;
+  border-right: 2px solid;
+}
+/* line 50, ../compass/sass/style.scss */
+#total-wrapper #nav-wrapper #nav-center #nav-bar-center #channels {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+/* line 60, ../compass/sass/style.scss */
+#total-wrapper #nav-wrapper #nav-right {
+  width: 30%;
+  float: left;
+}
+/* line 63, ../compass/sass/style.scss */
+#total-wrapper #nav-wrapper #nav-right #account-links {
+  padding-top: 35px;
+  text-align: right;
+}
+/* line 68, ../compass/sass/style.scss */
+#total-wrapper #nav-wrapper #nav-right #nav-bar-right {
+  width: 100%;
+  padding-top: 25px;
+}
+/* line 71, ../compass/sass/style.scss */
+#total-wrapper #nav-wrapper #nav-right #nav-bar-right ul li {
+  float: right;
+  list-style-type: none;
+  margin-left: 25px;
+}

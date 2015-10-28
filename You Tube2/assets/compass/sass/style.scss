@@ -1,0 +1,82 @@
+#total-wrapper{
+	max-width: 1080px;
+	margin: auto;
+	width: 100%;
+	#home{
+		width: 90%;
+		margin:auto;
+		padding-bottom: 5px;
+		border-bottom: 2px solid;
+	}
+	#nav-wrapper{
+		padding-top: 8px;
+		width: 90%;
+		margin: auto;
+		border-bottom: 2px solid;
+		padding-bottom: 2px;
+		height: 130px;
+		#nav-left{
+			width: 20%;
+			float: left;
+			img{
+				max-width: 100%;
+			}
+		}
+		#nav-center{
+			width: 50%;
+			float: left;
+			#search-bar{
+				padding-top: 35px;
+				width: 100%;
+				input{
+					width: 60%;
+					margin-right: 10px;
+				}
+			}
+			#nav-bar-center{
+				padding-top: 15px;
+				#home-nav{
+					float:left;
+					width: 20%;
+					text-align: center;
+				}
+				#videos{
+					float:left;
+					width: 20%;
+					text-align: center;
+					border-left: 2px solid;
+					border-right: 2px solid;
+				}
+				#channels{
+					float:left;
+					width: 20%;
+					text-align: center;
+				}
+
+			}
+
+
+		}
+		#nav-right{
+			width: 30%;
+			float: left;
+			#account-links{
+				padding-top: 35px;
+				text-align: right;
+
+			}
+			#nav-bar-right{
+				width: 100%;
+				padding-top: 25px;
+				ul li{
+					float: right;
+					list-style-type: none;
+					margin-left: 25px;
+				}
+			}
+		}
+
+
+	}
+
+}
