@@ -91,15 +91,14 @@
 }
 /* line 82, ../compass/sass/style.scss */
 #total-wrapper #video-wrapper {
-  height: 600px;
   max-width: 100%;
-  margin: auto;
+  margin: 2% auto 0%;
   clear: both;
 }
 /* line 89, ../compass/sass/style.scss */
 #total-wrapper #video-wrapper #featured-wrapper {
   width: 75%;
-  background-color: #c3c3c3;
+  background-color: #dddddd;
   float: left;
 }
 /* line 95, ../compass/sass/style.scss */
@@ -163,7 +162,7 @@
 }
 /* line 156, ../compass/sass/style.scss */
 #total-wrapper #more-videos-wrapper {
-  background-color: #c3c3c3;
+  background-color: #dddddd;
   border: 2px solid;
   overflow: hidden;
   padding-left: 3%;
