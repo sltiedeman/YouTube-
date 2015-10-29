@@ -54,8 +54,6 @@
 				}
 
 			}
-
-
 		}
 		#nav-right{
 			width: 30%;
@@ -75,16 +73,14 @@
 				}
 			}
 		}
-
-
 	}
-
 	#video-wrapper{
 		// height: 600px;
 		// background-color: skyblue;
 		max-width: 100%;
 		margin: 2% auto 0%;
 		clear: both;
+		margin-bottom: 2%;
 
 		#featured-wrapper{
 			width: 75%;
@@ -136,10 +132,11 @@
 					line-height: .7em;
 				}
 			}
+			}
 		}
 
 		#popup-wrapper{
-			height: 550px;
+			height: 520px;
 			width: 25%;
 			float: left;
 			#modal-pic{
@@ -156,7 +153,7 @@
 			}
 		}
 	}
-	
+
 	#more-videos-wrapper{
 		background-color: #dddddd;
 		border: 2px solid;
@@ -165,7 +162,6 @@
 		#more-videos-title{
 			padding-top: 2%;
 			font-size: 20px;
-
 		}
 		#more-videos{
 			width: 100%;
@@ -194,30 +190,8 @@
 			}
 		}
 	}
+
 	#button{
 		margin-top: 2%;
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
