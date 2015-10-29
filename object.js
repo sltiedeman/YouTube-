@@ -94,18 +94,21 @@ var videosBySamePoster = [
 	}
 ];
 
-	var videohtml="";
+var videohtml="";
 
 $(document).ready(function(){
 	for(i=0; i<videosBySamePoster.length; i++){
 		videohtml +='<div class="thumbnail"><a href=' + videosBySamePoster[i].url + '><img src=' + videosBySamePoster[i].thumb + '></a></div>';
-		videohtml +='<div class="feature-minis"' + ' id="feature-minis-"' + i + '><p class="video-title">' + videosBySamePoster[i].vidtitle + '</p>';
+		videohtml +='<div class="feature-minis"' + ' id="feature-minis-"' + i + '><span class="video-title">' + videosBySamePoster[i].vidtitle + '</span>';
 		videohtml += '<p>by ' + videosBySamePoster[i].postedBy + '</p>';
 		videohtml += '<p>Duration: ' + videosBySamePoster[i].duration + '</p>';
 		videohtml += '<p>Views: ' + videosBySamePoster[i].totalViews + '<p></div>';
 	}
 	$('#featured-previews').html(videohtml);
 
+	addVideos();
+
+function addVideos(){
 	videohtml="";
 	for(i=0; i<otherVideos.length; i++){
 		videohtml += '<div class = "more-videos-previews"><div class ="more-thumbnails"><a href=' + otherVideos[i].url + '><img src=';
@@ -114,6 +117,26 @@ $(document).ready(function(){
 
 	}
 	$('#more-videos').html(videohtml);
+}
+
+
+	$('#form-submit').submit(function(){
+		
+		var newObject = {
+			vidtitle: $('#vidtitle').val(),
+			postedBy: $('#postedBy').val(),
+			thumb: $('#thumb').val(),
+			url: $('#url').val()		
+
+		}
+		otherVideos.unshift(newObject);
+		otherVideos.pop();
+		addVideos();
+		event.preventDefault();
+
+	})
+
+
 
 
 
