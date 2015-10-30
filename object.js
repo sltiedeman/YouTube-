@@ -98,8 +98,14 @@ var videohtml="";
 
 $(document).ready(function(){
 	for(i=0; i<videosBySamePoster.length; i++){
+		var videoTitle = videosBySamePoster[i].vidtitle;
+		if(videoTitle.length > 50){
+			var newTitle = videoTitle.slice(0, 49);	
+		}else{
+			var newTitle = videoTitle;
+		}
 		videohtml +='<div class="thumbnail"><a href=' + videosBySamePoster[i].url + '><img src=' + videosBySamePoster[i].thumb + '></a></div>';
-		videohtml +='<div class="feature-minis"' + ' id="feature-minis-"' + i + '><span class="video-title">' + videosBySamePoster[i].vidtitle + '</span>';
+		videohtml +='<div class="feature-minis"' + ' id="feature-minis-"' + i + '><span class="video-title">' + newTitle + '</span>';
 		videohtml += '<p>by ' + videosBySamePoster[i].postedBy + '</p>';
 		videohtml += '<p>Duration: ' + videosBySamePoster[i].duration + '</p>';
 		videohtml += '<p>Views: ' + videosBySamePoster[i].totalViews + '<p></div>';
@@ -111,9 +117,15 @@ $(document).ready(function(){
 function addVideos(){
 	videohtml="";
 	for(i=0; i<otherVideos.length; i++){
+		var videoTitle = otherVideos[i].vidtitle;
+		if(videoTitle.length > 55){
+			var newTitle = videoTitle.slice(0, 54) + "...";	
+		}else{
+			var newTitle = videoTitle;
+		}
 		videohtml += '<div class = "more-videos-previews"><div class ="more-thumbnails"><a href=' + otherVideos[i].url + '><img src=';
 		videohtml += otherVideos[i].thumb + '></a></div><div class="thumbnail-text">';
-		videohtml += '<p class="video-title">' + otherVideos[i].vidtitle + '</p><p>' + otherVideos[i].postedBy + '</p></div></div>';
+		videohtml += '<p class="video-title">' + newTitle + '</p><p>' + otherVideos[i].postedBy + '</p></div></div>';
 
 	}
 	$('#more-videos').html(videohtml);
@@ -133,6 +145,7 @@ function addVideos(){
 		otherVideos.pop();
 		addVideos();
 		event.preventDefault();
+		$('#myModal2').modal('hide');
 
 	})
 

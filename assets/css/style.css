@@ -186,17 +186,18 @@
   float: left;
   width: 25%;
   margin-bottom: 3%;
+  height: 90px;
 }
-/* line 172, ../compass/sass/style.scss */
+/* line 173, ../compass/sass/style.scss */
 #total-wrapper #more-videos-wrapper #more-videos .more-videos-previews .more-thumbnails {
   width: 50%;
 }
-/* line 174, ../compass/sass/style.scss */
+/* line 175, ../compass/sass/style.scss */
 #total-wrapper #more-videos-wrapper #more-videos .more-videos-previews .more-thumbnails img {
   float: left;
-  height: 100%;
+  max-width: 100%;
 }
-/* line 180, ../compass/sass/style.scss */
+/* line 182, ../compass/sass/style.scss */
 #total-wrapper #more-videos-wrapper #more-videos .more-videos-previews .thumbnail-text {
   float: left;
   font-size: 10px;
@@ -204,11 +205,11 @@
   padding-left: 2%;
   width: 50%;
 }
-/* line 186, ../compass/sass/style.scss */
+/* line 188, ../compass/sass/style.scss */
 #total-wrapper #more-videos-wrapper #more-videos .more-videos-previews .thumbnail-text .video-title {
   font-weight: bold;
 }
-/* line 194, ../compass/sass/style.scss */
+/* line 196, ../compass/sass/style.scss */
 #total-wrapper #button {
   margin-top: 2%;
 }
