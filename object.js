@@ -100,7 +100,7 @@ $(document).ready(function(){
 	for(i=0; i<videosBySamePoster.length; i++){
 		var videoTitle = videosBySamePoster[i].vidtitle;
 		if(videoTitle.length > 50){
-			var newTitle = videoTitle.slice(0, 49);	
+			var newTitle = videoTitle.slice(0, 49) + "...";	
 		}else{
 			var newTitle = videoTitle;
 		}
