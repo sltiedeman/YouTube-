@@ -125,84 +125,87 @@
   width: 34%;
   margin-left: 3%;
   margin-right: 3%;
+  margin-top: 4%;
 }
-/* line 115, ../compass/sass/style2.scss */
+/* line 116, ../compass/sass/style2.scss */
 #total-wrapper #video-wrapper #featured-wrapper #featured-previews .thumbnail {
+  clear: both;
   float: left;
   width: 40%;
   margin-top: 2%;
 }
-/* line 121, ../compass/sass/style2.scss */
+/* line 123, ../compass/sass/style2.scss */
 #total-wrapper #video-wrapper #featured-wrapper #featured-previews .feature-minis {
-  height: 150px;
+  padding-top: 3%;
+  height: 100px;
   float: left;
   width: 56%;
   margin-left: 4%;
   font-size: 12px;
 }
-/* line 131, ../compass/sass/style2.scss */
+/* line 134, ../compass/sass/style2.scss */
 #total-wrapper #video-wrapper #featured-wrapper #featured-previews .video-title {
   font-weight: bold;
 }
-/* line 133, ../compass/sass/style2.scss */
+/* line 136, ../compass/sass/style2.scss */
 #total-wrapper #video-wrapper #featured-wrapper #featured-previews .video-title p {
   margin-top: 10px;
   line-height: .7em;
 }
-/* line 141, ../compass/sass/style2.scss */
+/* line 144, ../compass/sass/style2.scss */
 #total-wrapper #video-wrapper #popup-wrapper {
   height: 520px;
   width: 25%;
   float: left;
 }
-/* line 145, ../compass/sass/style2.scss */
+/* line 148, ../compass/sass/style2.scss */
 #total-wrapper #video-wrapper #popup-wrapper #modal-pic {
   height: 300px;
   margin-left: 2%;
 }
-/* line 148, ../compass/sass/style2.scss */
+/* line 151, ../compass/sass/style2.scss */
 #total-wrapper #video-wrapper #popup-wrapper #modal-pic img {
   max-width: 100%;
 }
-/* line 153, ../compass/sass/style2.scss */
+/* line 156, ../compass/sass/style2.scss */
 #total-wrapper #video-wrapper #popup-wrapper #modal-description {
   height: 30px;
   margin-left: 2%;
 }
-/* line 160, ../compass/sass/style2.scss */
+/* line 163, ../compass/sass/style2.scss */
 #total-wrapper #more-videos-wrapper {
   background-color: #dddddd;
   border: 2px solid;
   overflow: hidden;
   padding-left: 3%;
 }
-/* line 165, ../compass/sass/style2.scss */
+/* line 168, ../compass/sass/style2.scss */
 #total-wrapper #more-videos-wrapper #more-videos-title {
   padding-top: 2%;
   font-size: 20px;
 }
-/* line 169, ../compass/sass/style2.scss */
+/* line 172, ../compass/sass/style2.scss */
 #total-wrapper #more-videos-wrapper #more-videos {
   width: 100%;
 }
-/* line 171, ../compass/sass/style2.scss */
+/* line 174, ../compass/sass/style2.scss */
 #total-wrapper #more-videos-wrapper #more-videos .more-videos-previews {
   float: left;
   width: 25%;
   margin-bottom: 3%;
   height: 90px;
 }
-/* line 176, ../compass/sass/style2.scss */
+/* line 179, ../compass/sass/style2.scss */
 #total-wrapper #more-videos-wrapper #more-videos .more-videos-previews .more-thumbnails {
   width: 50%;
   background-color: black;
 }
-/* line 178, ../compass/sass/style2.scss */
+/* line 181, ../compass/sass/style2.scss */
 #total-wrapper #more-videos-wrapper #more-videos .more-videos-previews .more-thumbnails img {
   float: left;
   max-width: 100%;
 }
-/* line 186, ../compass/sass/style2.scss */
+/* line 189, ../compass/sass/style2.scss */
 #total-wrapper #more-videos-wrapper #more-videos .more-videos-previews .thumbnail-text {
   float: left;
   font-size: 10px;
@@ -210,12 +213,12 @@
   padding-left: 2%;
   width: 50%;
 }
-/* line 192, ../compass/sass/style2.scss */
+/* line 195, ../compass/sass/style2.scss */
 #total-wrapper #more-videos-wrapper #more-videos .more-videos-previews .thumbnail-text .video-title {
   font-weight: bold;
   height: 50px;
 }
-/* line 201, ../compass/sass/style2.scss */
+/* line 204, ../compass/sass/style2.scss */
 #total-wrapper #button {
   margin-top: 2%;
 }

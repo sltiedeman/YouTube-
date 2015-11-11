@@ -140,22 +140,22 @@
 	        <h4 class="modal-title" id="myModalLabel">Add Your Favorite Video</h4>
 	      </div>
 	      <div class="modal-body">
-	      	<form id="form-submit">
+	      	<form id="form-submit" ng-submit="addSingleVideo()">
 	      		<div class="form-group">
 		     		<label for="vidtitle">Title</label>
-		      		<input class="form-control" type="text" id="vidtitle">
+		      		<input class="form-control" type="text" id="vidtitle" ng-model="firstName">
 	      		</div>
 	      		<div class="form-group">
 		      		<label for="postedBy">Posted By</label>
-		      		<input class="form-control" type="text" id="postedBy">
+		      		<input class="form-control" type="text" id="postedBy" ng-model="postedBy">
 		      	</div>
 		      	<div class="form-group">
 		      		<label for="thumb">Image URL</label>
-		      		<input class="form-control" type="text" id="thumb">
+		      		<input class="form-control" type="text" id="thumb" ng-model="thumb">
 		      	</div>
 		      	<div class="form-group">
 		      		<label for="url">Video URL</label>
-		      		<input class="form-control" type="text" id="url">
+		      		<input class="form-control" type="text" id="url" ng-model="url">
 		      	</div>
 	      		<input type="submit" id="submit-button">
 	      	</form>

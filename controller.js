@@ -5,7 +5,7 @@ var otherVideos = [];
 var apiKey = 'AIzaSyB4cvmIQgRWdLIHTUm_L3-KB4p3O62mTKY';
 var baseUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=4&q=';
 var youTubeUrl = 'https://www.youtube.com/watch?v=';
-
+var popularVideoArray = [];
 
 angular.module('myApp', []).controller('myController', function($scope, $sce, $http){
 	$scope.mainUrl = $sce.trustAsResourceUrl('https://www.youtube.com/embed/RUz_EXSmp9w');
@@ -14,7 +14,7 @@ angular.module('myApp', []).controller('myController', function($scope, $sce, $h
 	// var singleVideoUrl = 'https://www.googleapis.com/youtube/v3/videos?id='+videoId+'&part=snippet,statistics&key='+apiKey;
 	$scope.videos = "";
 
-	moreVideosUrl = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=8&key=';
+	moreVideosUrl = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=11&key=';
 	moreVideosUrl += 'AIzaSyB4cvmIQgRWdLIHTUm_L3-KB4p3O62mTKY';
 	$http.get(moreVideosUrl).success(function(data){
 		$scope.popularVideos = data.items;
@@ -35,7 +35,31 @@ angular.module('myApp', []).controller('myController', function($scope, $sce, $h
 			}
 			$scope.videoList.push(videos);
 		}
+		popularVideoArray = ($scope.videoList);
 		console.log($scope.videoList);
+
+		var videohtml ="";
+		for(i=8; i<11; i++){
+			videoTitle = $scope.popularVideos[i].snippet.title;
+			if(videoTitle.length > 55){
+					newTitle = videoTitle.slice(0, 54) + "...";	
+				}else{
+					newTitle = videoTitle;
+				}
+			var videos = {
+				vidtitle: newTitle,
+				thumb: $scope.popularVideos[i].snippet.thumbnails.default.url,
+				url: youTubeUrl + $scope.popularVideos[i].id,
+				postedBy: $scope.popularVideos[i].snippet.channelTitle,
+			}
+			videohtml +='<div class="thumbnail"><a href=' + videos.url + '><img src=' + videos.thumb + '></a></div>';
+			videohtml +='<div class="feature-minis"' + ' id="feature-minis-"' + i + '><span class="video-title">' + videos.vidtitle+ '</span>';
+			videohtml += '<p>by ' + videos.postedBy + '</p>';
+			videohtml += '</div>';
+		}
+		console.log("videohtml " + videohtml);
+		$('#featured-previews').html(videohtml);
+
 
 	})
 
@@ -61,37 +85,58 @@ angular.module('myApp', []).controller('myController', function($scope, $sce, $h
 	      	mainVideoHtml += '<p>by ' + $scope.videos[0].snippet.channelTitle + '</p';
 	      	$('#video').html(mainVideoHtml);
 
+	      	//creates an object with 3 of the videos from the search
 	      	console.log($scope.videos);
 	      	for(i=1; i<4; i++){	      		
 				var videos = {
 					vidtitle: $scope.videos[i].snippet.title,
 					thumb: $scope.videos[i].snippet.thumbnails.default.url,
 					url: youTubeUrl + $scope.videos[i].id.videoId,
-					duration: "2:43:58",
-					postedBy: $scope.videos[i].snippet.channelTitle,
-					totalViews: 100000
+					postedBy: $scope.videos[i].snippet.channelTitle
 				}
 				console.log(videos.url);
 				videosBySamePoster.push(videos);
 			}
 			console.log(videosBySamePoster);
 			for(i=0; i<videosBySamePoster.length; i++){
-			var videoTitle = videosBySamePoster[i].vidtitle;
-			if(videoTitle.length > 50){
-				var newTitle = videoTitle.slice(0, 49) + "...";	
-			}else{
-				var newTitle = videoTitle;
+				var videoTitle = videosBySamePoster[i].vidtitle;
+				if(videoTitle.length > 50){
+					var newTitle = videoTitle.slice(0, 49) + "...";	
+				}else{
+					var newTitle = videoTitle;
+				}
+				videohtml +='<div class="thumbnail"><a href=' + videosBySamePoster[i].url + '><img src=' + videosBySamePoster[i].thumb + '></a></div>';
+				videohtml +='<div class="feature-minis"' + ' id="feature-minis-"' + i + '><span class="video-title">' + newTitle + '</span>';
+				videohtml += '<p>by ' + videosBySamePoster[i].postedBy + '</p>';
+				videohtml += '</div>';
 			}
-			videohtml +='<div class="thumbnail"><a href=' + videosBySamePoster[i].url + '><img src=' + videosBySamePoster[i].thumb + '></a></div>';
-			videohtml +='<div class="feature-minis"' + ' id="feature-minis-"' + i + '><span class="video-title">' + newTitle + '</span>';
-			videohtml += '<p>by ' + videosBySamePoster[i].postedBy + '</p>';
-			videohtml += '<p>Duration: ' + videosBySamePoster[i].duration + '</p>';
-			videohtml += '<p>Views: ' + videosBySamePoster[i].totalViews + '<p></div>';
-	}
-	$('#featured-previews').html(videohtml);
+			$('#featured-previews').html(videohtml);
     	});
 
 	}
+
+	$scope.addSingleVideo = function(){
+
+			
+		var newObject = {
+			vidtitle: $scope.firstName,
+			postedBy: $scope.postedBy,
+			thumb: $scope.thumb,
+			url: $scope.url	
+
+		}
+		console.log(newObject);
+		console.log(popularVideoArray);
+		
+		popularVideoArray.unshift(newObject);
+		popularVideoArray.pop();
+		// addVideos();
+		event.preventDefault();
+		$('#myModal2').modal('hide');
+
+	}
+
+
 
 });
 	
@@ -100,29 +145,6 @@ angular.module('myApp', []).controller('myController', function($scope, $sce, $h
 
 
 
-	
-
-	
-
-
-
-
-	$('#form-submit').submit(function(){
-		
-		var newObject = {
-			vidtitle: $('#vidtitle').val(),
-			postedBy: $('#postedBy').val(),
-			thumb: $('#thumb').val(),
-			url: $('#url').val()		
-
-		}
-		otherVideos.unshift(newObject);
-		otherVideos.pop();
-		addVideos();
-		event.preventDefault();
-		$('#myModal2').modal('hide');
-
-	})
 
 
 

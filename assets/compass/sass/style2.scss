@@ -112,7 +112,9 @@
 				width: 34%;
 				margin-left: 3%;
 				margin-right: 3%;
+				margin-top: 4%;
 				.thumbnail{
+					clear: both;
 					float: left;
 					width: 40%;
 					margin-top: 2%;
@@ -120,7 +122,8 @@
 
 				.feature-minis{
 					// margin-bottom: 4%;
-					height: 150px;
+					padding-top: 3%;
+					height: 100px;
 					float: left;
 					width: 56%;
 					margin-left: 4%;
