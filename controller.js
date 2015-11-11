@@ -8,19 +8,25 @@ var youTubeUrl = 'https://www.youtube.com/watch?v=';
 var popularVideoArray = [];
 
 angular.module('myApp', []).controller('myController', function($scope, $sce, $http){
+	$scope.pageTitle = "Featured";
 	$scope.mainUrl = $sce.trustAsResourceUrl('https://www.youtube.com/embed/RUz_EXSmp9w');
 	var videosBySamePoster = [];
 
 	// var singleVideoUrl = 'https://www.googleapis.com/youtube/v3/videos?id='+videoId+'&part=snippet,statistics&key='+apiKey;
 	$scope.videos = "";
 
-	moreVideosUrl = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=11&key=';
+	moreVideosUrl = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=12&key=';
 	moreVideosUrl += 'AIzaSyB4cvmIQgRWdLIHTUm_L3-KB4p3O62mTKY';
 	$http.get(moreVideosUrl).success(function(data){
+		
 		$scope.popularVideos = data.items;
 		console.log($scope.popularVideos);
+		var makeUrl = 'https://www.youtube.com/embed/' + $scope.popularVideos[0].id;
+		$scope.mainUrl = $sce.trustAsResourceUrl(makeUrl);
+		$scope.title = $scope.popularVideos[0].snippet.title;
+		$scope.postedBy = $scope.popularVideos[0].snippet.channelTitle;
 		$scope.videoList = [];
-		for(i=0; i < 8; i++){
+		for(i=1; i < 9; i++){
 			var videoTitle = $scope.popularVideos[i].snippet.title;
 			if(videoTitle.length > 55){
 					var newTitle = videoTitle.slice(0, 54) + "...";	
@@ -39,7 +45,7 @@ angular.module('myApp', []).controller('myController', function($scope, $sce, $h
 		console.log($scope.videoList);
 
 		var videohtml ="";
-		for(i=8; i<11; i++){
+		for(i=9; i<12; i++){
 			videoTitle = $scope.popularVideos[i].snippet.title;
 			if(videoTitle.length > 55){
 					newTitle = videoTitle.slice(0, 54) + "...";	
@@ -75,6 +81,7 @@ angular.module('myApp', []).controller('myController', function($scope, $sce, $h
 
 		//run this function when user submits a search
 		$http.get(totalUrl).success(function(data) {
+			$scope.pageTitle="Search Results";
 			var videohtml = "";
 	      	$scope.videos = data.items;
 	      	//this is the main video to go on the page
