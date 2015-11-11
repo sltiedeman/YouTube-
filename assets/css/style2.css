@@ -1,0 +1,221 @@
+/* line 1, ../compass/sass/style2.scss */
+#total-wrapper {
+  max-width: 1080px;
+  margin: 0 auto 5%;
+  width: 100%;
+}
+/* line 5, ../compass/sass/style2.scss */
+#total-wrapper #home {
+  width: 95%;
+  margin: auto;
+  padding-bottom: 5px;
+  border-bottom: 2px solid;
+}
+/* line 11, ../compass/sass/style2.scss */
+#total-wrapper #nav-wrapper {
+  width: 95%;
+  margin: auto;
+  border-bottom: 2px solid;
+  padding-bottom: 2px;
+  height: 130px;
+}
+/* line 18, ../compass/sass/style2.scss */
+#total-wrapper #nav-wrapper #nav-left {
+  width: 20%;
+  float: left;
+}
+/* line 21, ../compass/sass/style2.scss */
+#total-wrapper #nav-wrapper #nav-left img {
+  max-width: 100%;
+}
+/* line 25, ../compass/sass/style2.scss */
+#total-wrapper #nav-wrapper #nav-center {
+  width: 50%;
+  float: left;
+}
+/* line 28, ../compass/sass/style2.scss */
+#total-wrapper #nav-wrapper #nav-center #search-bar {
+  padding-top: 35px;
+  width: 100%;
+}
+/* line 31, ../compass/sass/style2.scss */
+#total-wrapper #nav-wrapper #nav-center #search-bar input {
+  width: 60%;
+  margin-right: 10px;
+}
+/* line 35, ../compass/sass/style2.scss */
+#total-wrapper #nav-wrapper #nav-center #search-bar #button {
+  width: 15%;
+}
+/* line 39, ../compass/sass/style2.scss */
+#total-wrapper #nav-wrapper #nav-center #nav-bar-center {
+  padding-top: 15px;
+}
+/* line 41, ../compass/sass/style2.scss */
+#total-wrapper #nav-wrapper #nav-center #nav-bar-center #home-nav {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+/* line 46, ../compass/sass/style2.scss */
+#total-wrapper #nav-wrapper #nav-center #nav-bar-center #videos {
+  float: left;
+  width: 20%;
+  text-align: center;
+  border-left: 2px solid;
+  border-right: 2px solid;
+}
+/* line 53, ../compass/sass/style2.scss */
+#total-wrapper #nav-wrapper #nav-center #nav-bar-center #channels {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+/* line 61, ../compass/sass/style2.scss */
+#total-wrapper #nav-wrapper #nav-right {
+  width: 30%;
+  float: left;
+}
+/* line 64, ../compass/sass/style2.scss */
+#total-wrapper #nav-wrapper #nav-right #account-links {
+  padding-top: 35px;
+  text-align: right;
+}
+/* line 69, ../compass/sass/style2.scss */
+#total-wrapper #nav-wrapper #nav-right #nav-bar-right {
+  width: 100%;
+  padding-top: 25px;
+}
+/* line 72, ../compass/sass/style2.scss */
+#total-wrapper #nav-wrapper #nav-right #nav-bar-right ul li {
+  float: right;
+  list-style-type: none;
+  margin-left: 25px;
+}
+/* line 80, ../compass/sass/style2.scss */
+#total-wrapper #video-wrapper {
+  max-width: 100%;
+  margin: 2% auto 0%;
+  clear: both;
+  margin-bottom: 2%;
+}
+/* line 88, ../compass/sass/style2.scss */
+#total-wrapper #video-wrapper #featured-wrapper {
+  width: 75%;
+  background-color: #dddddd;
+  float: left;
+}
+/* line 94, ../compass/sass/style2.scss */
+#total-wrapper #video-wrapper #featured-wrapper #featured {
+  font-size: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+/* line 100, ../compass/sass/style2.scss */
+#total-wrapper #video-wrapper #featured-wrapper #video {
+  float: left;
+  width: 57%;
+  margin-left: 3%;
+  padding-left: 4%;
+  padding-top: 5%;
+}
+/* line 110, ../compass/sass/style2.scss */
+#total-wrapper #video-wrapper #featured-wrapper #featured-previews {
+  float: left;
+  width: 34%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+/* line 115, ../compass/sass/style2.scss */
+#total-wrapper #video-wrapper #featured-wrapper #featured-previews .thumbnail {
+  float: left;
+  width: 40%;
+  margin-top: 2%;
+}
+/* line 121, ../compass/sass/style2.scss */
+#total-wrapper #video-wrapper #featured-wrapper #featured-previews .feature-minis {
+  height: 150px;
+  float: left;
+  width: 56%;
+  margin-left: 4%;
+  font-size: 12px;
+}
+/* line 131, ../compass/sass/style2.scss */
+#total-wrapper #video-wrapper #featured-wrapper #featured-previews .video-title {
+  font-weight: bold;
+}
+/* line 133, ../compass/sass/style2.scss */
+#total-wrapper #video-wrapper #featured-wrapper #featured-previews .video-title p {
+  margin-top: 10px;
+  line-height: .7em;
+}
+/* line 141, ../compass/sass/style2.scss */
+#total-wrapper #video-wrapper #popup-wrapper {
+  height: 520px;
+  width: 25%;
+  float: left;
+}
+/* line 145, ../compass/sass/style2.scss */
+#total-wrapper #video-wrapper #popup-wrapper #modal-pic {
+  height: 300px;
+  margin-left: 2%;
+}
+/* line 148, ../compass/sass/style2.scss */
+#total-wrapper #video-wrapper #popup-wrapper #modal-pic img {
+  max-width: 100%;
+}
+/* line 153, ../compass/sass/style2.scss */
+#total-wrapper #video-wrapper #popup-wrapper #modal-description {
+  height: 30px;
+  margin-left: 2%;
+}
+/* line 160, ../compass/sass/style2.scss */
+#total-wrapper #more-videos-wrapper {
+  background-color: #dddddd;
+  border: 2px solid;
+  overflow: hidden;
+  padding-left: 3%;
+}
+/* line 165, ../compass/sass/style2.scss */
+#total-wrapper #more-videos-wrapper #more-videos-title {
+  padding-top: 2%;
+  font-size: 20px;
+}
+/* line 169, ../compass/sass/style2.scss */
+#total-wrapper #more-videos-wrapper #more-videos {
+  width: 100%;
+}
+/* line 171, ../compass/sass/style2.scss */
+#total-wrapper #more-videos-wrapper #more-videos .more-videos-previews {
+  float: left;
+  width: 25%;
+  margin-bottom: 3%;
+  height: 90px;
+}
+/* line 176, ../compass/sass/style2.scss */
+#total-wrapper #more-videos-wrapper #more-videos .more-videos-previews .more-thumbnails {
+  width: 50%;
+  background-color: black;
+}
+/* line 178, ../compass/sass/style2.scss */
+#total-wrapper #more-videos-wrapper #more-videos .more-videos-previews .more-thumbnails img {
+  float: left;
+  max-width: 100%;
+}
+/* line 186, ../compass/sass/style2.scss */
+#total-wrapper #more-videos-wrapper #more-videos .more-videos-previews .thumbnail-text {
+  float: left;
+  font-size: 10px;
+  overflow: hidden;
+  padding-left: 2%;
+  width: 50%;
+}
+/* line 192, ../compass/sass/style2.scss */
+#total-wrapper #more-videos-wrapper #more-videos .more-videos-previews .thumbnail-text .video-title {
+  font-weight: bold;
+  height: 50px;
+}
+/* line 201, ../compass/sass/style2.scss */
+#total-wrapper #button {
+  margin-top: 2%;
+}
