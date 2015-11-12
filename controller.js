@@ -17,6 +17,16 @@ angular.module('myApp', []).controller('myController', function($scope, $sce, $h
 
 	moreVideosUrl = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=12&key=';
 	moreVideosUrl += 'AIzaSyB4cvmIQgRWdLIHTUm_L3-KB4p3O62mTKY';
+
+	function videoTitleLength(videoTitle){
+		if(videoTitle.length > 55){
+			var newTitle = videoTitle.slice(0, 54) + "...";	
+		}else{
+			var newTitle = videoTitle;
+		}
+		return newTitle
+	}
+
 	$http.get(moreVideosUrl).success(function(data){
 		
 		$scope.popularVideos = data.items;
@@ -28,13 +38,9 @@ angular.module('myApp', []).controller('myController', function($scope, $sce, $h
 		$scope.videoList = [];
 		for(i=1; i < 9; i++){
 			var videoTitle = $scope.popularVideos[i].snippet.title;
-			if(videoTitle.length > 55){
-					var newTitle = videoTitle.slice(0, 54) + "...";	
-				}else{
-					var newTitle = videoTitle;
-				}
+			videoTitle = videoTitleLength(videoTitle);
 			var videos = {
-				vidtitle: newTitle,
+				vidtitle: videoTitle,
 				thumb: $scope.popularVideos[i].snippet.thumbnails.default.url,
 				url: youTubeUrl + $scope.popularVideos[i].id,
 				postedBy: $scope.popularVideos[i].snippet.channelTitle,
@@ -42,18 +48,13 @@ angular.module('myApp', []).controller('myController', function($scope, $sce, $h
 			$scope.videoList.push(videos);
 		}
 		popularVideoArray = ($scope.videoList);
-		console.log($scope.videoList);
 
 		var videohtml ="";
 		for(i=9; i<12; i++){
 			videoTitle = $scope.popularVideos[i].snippet.title;
-			if(videoTitle.length > 55){
-					newTitle = videoTitle.slice(0, 54) + "...";	
-				}else{
-					newTitle = videoTitle;
-				}
+			videoTitleLength(videoTitle);
 			var videos = {
-				vidtitle: newTitle,
+				vidtitle: videoTitle,
 				thumb: $scope.popularVideos[i].snippet.thumbnails.default.url,
 				url: youTubeUrl + $scope.popularVideos[i].id,
 				postedBy: $scope.popularVideos[i].snippet.channelTitle,
@@ -63,13 +64,9 @@ angular.module('myApp', []).controller('myController', function($scope, $sce, $h
 			videohtml += '<p>by ' + videos.postedBy + '</p>';
 			videohtml += '</div>';
 		}
-		console.log("videohtml " + videohtml);
 		$('#featured-previews').html(videohtml);
 
-
 	})
-
-
 
 	$scope.addVideo = function(){
 		//building the url to get the data object
@@ -93,7 +90,6 @@ angular.module('myApp', []).controller('myController', function($scope, $sce, $h
 	      	$('#video').html(mainVideoHtml);
 
 	      	//creates an object with 3 of the videos from the search
-	      	console.log($scope.videos);
 	      	for(i=1; i<4; i++){	      		
 				var videos = {
 					vidtitle: $scope.videos[i].snippet.title,
@@ -101,19 +97,14 @@ angular.module('myApp', []).controller('myController', function($scope, $sce, $h
 					url: youTubeUrl + $scope.videos[i].id.videoId,
 					postedBy: $scope.videos[i].snippet.channelTitle
 				}
-				console.log(videos.url);
 				videosBySamePoster.push(videos);
 			}
 			console.log(videosBySamePoster);
 			for(i=0; i<videosBySamePoster.length; i++){
 				var videoTitle = videosBySamePoster[i].vidtitle;
-				if(videoTitle.length > 50){
-					var newTitle = videoTitle.slice(0, 49) + "...";	
-				}else{
-					var newTitle = videoTitle;
-				}
+				videoTitle = videoTitleLength(videoTitle);
 				videohtml +='<div class="thumbnail"><a href=' + videosBySamePoster[i].url + '><img src=' + videosBySamePoster[i].thumb + '></a></div>';
-				videohtml +='<div class="feature-minis"' + ' id="feature-minis-"' + i + '><span class="video-title">' + newTitle + '</span>';
+				videohtml +='<div class="feature-minis"' + ' id="feature-minis-"' + i + '><span class="video-title">' + videoTitle + '</span>';
 				videohtml += '<p>by ' + videosBySamePoster[i].postedBy + '</p>';
 				videohtml += '</div>';
 			}
@@ -123,7 +114,6 @@ angular.module('myApp', []).controller('myController', function($scope, $sce, $h
 	}
 
 	$scope.addSingleVideo = function(){
-
 			
 		var newObject = {
 			vidtitle: $scope.firstName,
@@ -132,8 +122,6 @@ angular.module('myApp', []).controller('myController', function($scope, $sce, $h
 			url: $scope.url	
 
 		}
-		console.log(newObject);
-		console.log(popularVideoArray);
 		
 		popularVideoArray.unshift(newObject);
 		popularVideoArray.pop();
@@ -142,8 +130,6 @@ angular.module('myApp', []).controller('myController', function($scope, $sce, $h
 		$('#myModal2').modal('hide');
 
 	}
-
-
 
 });
 	
