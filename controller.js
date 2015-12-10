@@ -2,7 +2,7 @@
 var queryTerm;
 var videosBySamePoster = [];
 var otherVideos = [];
-var apiKey = 'AIzaSyB4cvmIQgRWdLIHTUm_L3-KB4p3O62mTKY';
+var apiKey = 'AIzaSyAoua9vXfMGFre2KFL1qdltt4kZL6j3dBI';
 var baseUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=4&q=';
 var youTubeUrl = 'https://www.youtube.com/watch?v=';
 var popularVideoArray = [];
