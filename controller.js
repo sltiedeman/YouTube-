@@ -7,6 +7,10 @@ var baseUrl = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResu
 var youTubeUrl = 'https://www.youtube.com/watch?v=';
 var popularVideoArray = [];
 
+function viewProject(){
+	document.getElementById("intro-page").style.display="none";
+}
+
 angular.module('myApp', []).controller('myController', function($scope, $sce, $http){
 	$scope.pageTitle = "Featured";
 	$scope.mainUrl = $sce.trustAsResourceUrl('https://www.youtube.com/embed/RUz_EXSmp9w');
